@@ -56,7 +56,8 @@ public class RNPushNotificationHelper {
     public Class getMainActivityClass() {
         String packageName = context.getPackageName();
         Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage(packageName);
-        String className = launchIntent.getComponent().getClassName();
+        // String className = launchIntent.getComponent().getClassName();
+        String className = "to.hover.android.app.MainActivity";
         try {
             return Class.forName(className);
         } catch (ClassNotFoundException e) {
